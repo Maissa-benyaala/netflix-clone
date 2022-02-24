@@ -7,7 +7,7 @@ function MovieList({category, movies, search}) {
         {category}
       </h2>
       <div className="movie-list-container">
-       {movies.filter(movie => movie.name.includes(search)).map(movie => {
+       {movies.filter(movie => movie.name.toUpperCase().includes(search.toUpperCase())).map(movie => {
          return(
         <Movie movie={movie}/>
          )
